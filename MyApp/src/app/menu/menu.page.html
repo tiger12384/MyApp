@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>หน้าผู้ดูแลระบบ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   
+
+        
+        <ion-item>
+            <ion-label>รายการพัสดุ :</ion-label>
+            <select [(ngModel)]="n1" >
+                <option *ngFor="let item of item">{{item.studentid}}</option>
+                
+              </select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>สถานะ :</ion-label>
+            <select [(ngModel)]="n8" >
+                <option>WAIT ADMIN</option>
+                <option>APPROVE</option>
+                
+              </select>
+        </ion-item>
+
+<div text-center>
+      <ion-button ion-button full (click)="updatetable(n1,n8)" color="secondary"> <ion-icon name="star"></ion-icon>
+        Update</ion-button>
+      </div>
+</ion-content>
+
+<ion-content padding>
+    <ion-list>
+        
+        <ion-item>
+            <ion-label>รายการพัสดุ :</ion-label>
+            <select [(ngModel)]="n10" >
+                <option *ngFor="let item of item">{{item.studentid}}</option>
+                
+              </select>
+        </ion-item>
+    
+      </ion-list>
+
+<div text-center>
+      <ion-button ion-button full (click)="detable(n10)" color="danger"> <ion-icon name="star"></ion-icon>
+        Delete</ion-button>
+      </div>
+
+      
+</ion-content>

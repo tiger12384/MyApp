@@ -1,0 +1,64 @@
+
+
+    
+  
+  <ion-header>
+      <ion-toolbar>
+        <ion-title>ฟอร์มการยืม</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-item>
+        <ion-label>รหัสนักศึกษา :</ion-label>
+        <ion-input  type="text" placeholder="กรอกรหัสนักศึกษา" [(ngModel)]="user.n1"></ion-input>
+       
+    </ion-item>
+
+<ion-item>
+    <ion-label>ชื่อนักศึกษา :</ion-label>
+    <ion-input  type="text" placeholder="กรอกชื่อนักศึกษา" [(ngModel)]="user.n2"></ion-input>
+   
+</ion-item>
+
+
+<ion-item>
+    <ion-label>เบอร์โทรศัพท์ :</ion-label>
+    <ion-input  type="text" placeholder="กรอกเบอร์โทรศัพท์" [(ngModel)]="user.n3"></ion-input>
+</ion-item>
+
+
+<ion-item>
+    <ion-label>รายการพัสดุ :</ion-label>
+    <select [(ngModel)]="user.n4" >
+        <option *ngFor="let item of item">{{item.nameobject}}</option>
+        
+      </select>
+</ion-item>
+
+<ion-item>
+    <ion-label>วันที่ยืม :</ion-label>
+    <ion-datetime  displayFormat="MM/DD/YYYY" [(ngModel)]="user.myDate5" placeholder="เลือกวันที่ยืม"></ion-datetime>
+  </ion-item>
+
+<ion-item>
+    <ion-label>วันที่คืน :</ion-label>
+    <ion-datetime  displayFormat="MM/DD/YYYY" [(ngModel)]="user.myDate6" placeholder="เลือกวันที่คืน"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>นำไปใช้งาน :</ion-label>
+     <ion-textarea type="text" placeholder="กรอกรายละเอียด" [(ngModel)]="user.n7"></ion-textarea>
+    </ion-item>
+
+<div text-center>
+    <ion-button  ion-button full (click)="addtable(user.n1,user.n2,user.n3,user.n4,user.myDate5,user.myDate6,user.n7)">
+        <ion-icon name="star"></ion-icon>
+        insert</ion-button>
+</div>
+    
+
+
+    
+    
+
+
